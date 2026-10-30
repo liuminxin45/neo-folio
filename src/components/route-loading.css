@@ -1,0 +1,15 @@
+/* SPDX-License-Identifier: CPAL-1.0
+ * Copyright (c) 2026 Neo (liuminxin45). See LICENSE and NOTICE.
+ */
+.route-shell { position: relative; isolation: isolate; overflow-x: clip; }
+.route-content, .route-panel { width: 100%; }
+.route-loading { width: min(calc(100% - 40px),800px); margin-inline: auto; min-height: 260px; padding-block: 48px; box-sizing: border-box; color: var(--muted); }
+.route-loading--inline { width: 100%; margin: 0; padding: 0; }
+.directory-body { min-height: 260px; }
+.route-loading-copy { display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 13px; }
+.route-loading-copy svg { flex-shrink: 0; animation: route-loading-spin 1s linear infinite; }
+.route-loading-copy button { min-height: 44px; padding: 8px; border: 0; background: transparent; color: var(--foreground); font: inherit; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.route-snapshot { position: absolute; z-index: 2; inset: 0 0 auto; pointer-events: none; user-select: none; }
+@keyframes route-loading-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { html:not(.motion-full) .route-loading-copy svg { animation: none; } }
+html.motion-reduce .route-loading-copy svg { animation: none; }

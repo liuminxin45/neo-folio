@@ -1,0 +1,52 @@
+{
+  "name": "neo-folio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "CPAL-1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && node scripts/finalize-build.mjs",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "check:privacy": "node scripts/check-privacy.mjs",
+    "test": "node --test scripts/template.test.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router": "^7.6.1",
+    "lucide-react": "^0.562.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "description": "An editorial React website template for blogs, portfolios, and galleries.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuminxin45/neo-folio.git"
+  },
+  "homepage": "https://liuminxin45.github.io/neo-folio/",
+  "bugs": {
+    "url": "https://github.com/liuminxin45/neo-folio/issues"
+  },
+  "author": "Neo (liuminxin45)"
+}

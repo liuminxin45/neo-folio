@@ -1,0 +1,54 @@
+/* SPDX-License-Identifier: CPAL-1.0
+ * Copyright (c) 2026 Neo (liuminxin45). See LICENSE and NOTICE.
+ */
+/* Template-specific layout. Shared tokens and original primitives remain in index/redesign. */
+.site-shell { padding-bottom: 0; }
+.template-home { padding-block: 54px 96px; }
+.template-muted, .template-article time { color: var(--muted); }
+.template-entries { display: grid; gap: 40px; padding-block: 12px 72px; }
+.template-entries h2 { font-size: 22px; margin: 0 0 8px; }
+.template-entries p { margin: 0; }
+.template-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; padding-block: 24px 72px; }
+.template-gallery button { background: none; border: 0; padding: 0; cursor: zoom-in; }
+.template-gallery img { width: 100%; height: auto; border-radius: 8px; }
+.template-article { padding-block: 32px 80px; }
+.template-article header { max-width: 720px; margin: 24px 0 40px; }
+.template-article h1 { font-size: clamp(28px,5vw,42px); line-height: 1.2; }
+.template-reading { display: grid; grid-template-columns: minmax(0,1fr) 190px; gap: 48px; }
+.template-reading article { max-width: 68ch; }
+.template-reading article section { margin-bottom: 56px; }
+.template-reading h2 { scroll-margin-top: 100px; font-size: 24px; }
+.template-reading nav { position: sticky; top: 32px; align-self: start; display: grid; gap: 16px; font-size: 14px; }
+.template-reading nav a { color: var(--muted); }
+.template-reading nav a[aria-current] { color: var(--accent); font-weight: 600; }
+.template-search { width: min(600px,calc(100% - 32px)); max-height: 80dvh; overflow: auto; color: var(--foreground); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+.template-search::backdrop { background: rgb(0 0 0 / .4); }
+.template-search-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.template-search input { width: 100%; margin-block: 16px; padding: 12px; color: inherit; background: var(--panel); border: 1px solid var(--line-strong); border-radius: 6px; }
+.template-search li { margin-block: 20px; }
+.image-lightbox-close { min-width: 44px; min-height: 44px; }
+.more-link { display: inline-block; margin-top: 24px; }
+@media(max-width:760px) { .nav-inner { grid-template-columns:1fr auto; gap:12px; padding-block:12px; } .nav-links { grid-column:1/-1; grid-row:2; display:flex; flex-wrap:wrap; gap:20px; } .nav-actions { grid-column:2; grid-row:1; } .template-reading { display:block; } .template-reading nav { display:none; } .template-gallery { grid-template-columns:1fr; } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
+
+dialog.image-lightbox { max-width: none; max-height: none; width: 100vw; height: 100dvh; margin: 0; padding: 0; border: 0; color: var(--foreground); }
+dialog.image-lightbox::backdrop { background: transparent; }
+
+.site-icon-action { display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; min-width:44px; min-height:44px; padding:0; border:0; background:transparent; color:var(--muted); text-decoration:none; cursor:pointer; box-shadow:none; transition:color 180ms ease,transform 220ms ease; }
+.site-icon-action:hover { color:var(--foreground); background:transparent; transform:translateY(-1px); }
+.site-icon-action:active { transform:scale(.94); }
+.site-icon-action:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:8px; }
+@media(prefers-reduced-motion:reduce) { .site-icon-action:hover,.site-icon-action:active { transform:none; } }
+html.motion-reduce .site-icon-action { transition:none; transform:none; }
+
+.template-credits { display:flex; align-items:center; flex-wrap:wrap; gap:4px 16px; font-size:12px; color:var(--muted); }
+.template-credits a { display:inline-flex; min-height:44px; align-items:center; text-decoration:underline; text-underline-offset:3px; }
+
+/* Keep required attribution visible when each page is first opened. */
+.site-shell { padding-bottom:110px; }
+.footer-section { position:fixed; inset:auto 0 0; z-index:30; padding-block:8px; background:var(--background); border-top:1px solid var(--line); }
+.footer-section .footer-bar { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:4px 20px; }
+.template-credits { max-width:100%; }
+@media(max-width:760px) { .site-shell { padding-bottom:180px; } .footer-section .footer-bar { align-items:flex-start; } .template-credits { gap:0 12px; } }
+
+.template-credits small { font-size:inherit; }

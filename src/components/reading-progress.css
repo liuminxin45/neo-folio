@@ -1,0 +1,5 @@
+/* SPDX-License-Identifier: CPAL-1.0
+ * Copyright (c) 2026 Neo (liuminxin45). See LICENSE and NOTICE.
+ */
+.reading-progress { position: fixed; top: 0; bottom: auto; left: 0; right: 0; z-index: 49; height: 1px; pointer-events: none; }
+.reading-progress span { display: block; width: 100%; height: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left center; }
