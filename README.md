@@ -6,6 +6,14 @@
 
 ![Neo Folio 桌面演示](docs/images/demo.png)
 
+Neo Folio is an editorial React personal-site template with blogs, a project directory, photography, and experience pages. It uses CPAL-1.0 and includes synthetic example content.
+
+## 适合怎样的网站
+
+适合以文章、作品和照片为主的个人网站。默认内容来自仓库中的类型化数据和 TSX 正文，不依赖数据库或在线 CMS；上线前需要替换身份信息与虚构示例。
+
+需要账号、后台或 AI 服务时，要自行实现相应服务和访问控制。公开部署还需遵守 CPAL-1.0 的显著署名及相关源码提供要求，不能将本模板按 MIT 模板使用。
+
 ## 功能
 
 - 首页只展示最多五篇最新博客，完整内容放在独立目录。
