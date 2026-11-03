@@ -1,5 +1,7 @@
 # Neo Folio
 
+<img src="public/favicon.svg" width="160" alt="Neo Folio logo" />
+
 一个简洁的 React 网站模板，包含博客、作品目录、图库和经历页面。界面与数据分开维护，默认不需要账号、数据库或外部 API。
 
 [查看在线演示](https://liuminxin45.github.io/neo-folio/) · [组件说明](docs/components.md) · [架构说明](docs/architecture.md) · [署名与许可](docs/licensing.md)
